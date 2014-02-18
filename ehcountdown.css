@@ -1,0 +1,131 @@
+/* =Earth Hour Countdown gadget which appears on various pages
+-------------------------------------------------------------- */
+/**
+ * CSS for the earthhour counter
+ */
+div.ehcountdown_field {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+div.ehcountdown_field_hours {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+div.ehcountdown_field_minutes {
+  margin-right: 5%;
+}
+/* the numbers */
+.ehcountdown_field .ehcountdown_field_digit {
+  height: 56%;
+}
+/* the captions */
+.ehcountdown_field .ehcountdown_field_caption {
+  margin-top: 7px;
+  height: 44%;
+  font-size: 18px;
+  text-align: center;
+  font-family: WWFRegular;
+  color: white;
+}
+/**
+ * CSS for the overall counter
+ */
+.ehcountdown_counter * {
+  position: absolute;
+}
+.ehcountdown_counter_digits {
+  height: 70%;
+  width: 100%;
+  margin-bottom: 5%;
+}
+/**
+ * CSS for the individual digits and the components that build up the
+ * special effect.
+ */
+.ehcountdown_digit * {
+  position: absolute;
+}
+.ehcountdown_digit {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  float: left;
+}
+.ehcountdown_digit_block {
+  height: 50%;
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  overflow: hidden;
+}
+.ehcountdown_digit_block_deco {
+  /* 50% - 1/2gap */
+  background-color: #272727;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border-top: 1px solid #323232;
+  -webkit-box-shadow: 2px 2px 5px #161616;
+  -moz-box-shadow: 2px 2px 5px #161616;
+  box-shadow: 2px 2px 5px #161616;
+  height: 48%;
+  width: 100%;
+}
+.ehcountdown_digit_flapTop {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.ehcountdown_digit_blockTop_deco {
+  /* height */
+  bottom: 52%;
+}
+.ehcountdown_digit_blockBottom_deco {
+  /* 50% + (height - 50%); bottom won't work for slideDown() */
+  top: 52%;
+}
+.ehcountdown_digit_number {
+  font-family: WWFRegular;
+  color: white;
+  width: 100%;
+  height: 1em;
+  text-align: center;
+  line-height: 1;
+  font-size: 25px;
+}
+.ehcountdown_digit_blockTop {
+  bottom: 50%;
+}
+.ehcountdown_digit_blockBottom {
+  /* 100% - height; bottom won't work for slideDown() */
+  top: 50%;
+}
+.ehcountdown_digit_blockTop > .ehcountdown_digit_number {
+  /* bottom -(font-size/2) - extra space for WWF font*/
+  bottom: -13px;
+}
+.ehcountdown_digit_blockBottom > .ehcountdown_digit_number {
+  /* top -(font-size/2) */
+  top: -12px;
+}
+.ehcountdown_digit_gap {
+  background-color: black;
+  height: 4%;
+  width: 90%;
+  /* 50% - 1/2height */
+  top: 48%;
+  left: 5%;
+}
+/* CSS for specific countdowns */
+/* the home page */
+div#ehcountdown_homepage {
+  width: 200px;
+  height: 60px;
+  position: relative;
+}
+div#ehcountdown_sidebar {
+  height: 55px;
+  width: 100%;
+}
